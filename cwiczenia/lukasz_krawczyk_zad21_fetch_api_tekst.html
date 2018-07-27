@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title>Zadanie 21. Fetch API &mdash; odczyt pliku tekstowego</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
+</head>
+<body>
+	
+	<script>
+
+		fetch('./lukasz_krawczyk_zad21_fetch_api_lorem_ipsum.txt')
+		.then(Response=> Response.text())
+		.then(Response => {
+			console.log(Response)
+		})
+		.catch(error => alert('coś poszło nie tak'))
+
+		/*
+
+		- Korzystając z metody .fetch(), odczytaj zawartość pliku tekstowego.
+		
+		- ./lukasz_krawczyk_zad21_fetch_api_lorem_ipsum.txt
+		
+		- W przypadku błędu, w konsoli ma zostać wyświetlony komunikat w postaci: 'Błąd:\n' + error.
+		
+		- W przypadku powodzenia, w konsoli ma zostać wyświetlona - oczywiście już wcześniej "stekstowana" - odpowiedź serwera.
+
+		*/
+
+	</script>
+
+</body>
+</html>
