@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 	<title>Zadanie 4. Funkcje strzałkowe</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
 </head>
+
 <body>
 
 	<script>
+		familyArray = []
 
-		const twoArgumnets = (x, y) =>  ({id: x, name: y})
-
-
-		console.log(twoArgumnets('666','JAnKowalski'))
-
-
-
-
-		let Person  = function (id, name) {
-			this.id = id,
+		function Person(id, name, lastName, age) {
+			this.id = id
 			this.name = name
+			this.lastName = lastName
+			this.age = age
 		}
+		new Person(9, 'Janusz', 'Kowalski', 19)
 
-		const jakKowalski = new Person('999','KowalczykJanek')
-		
-		console.log(jakKowalski)
+		const kasztan = new Person(1, 'Kasztanek', 'Kasztanowski', 12)
+
+		const kasztanka = new Person(2, 'Kasztanka', 'Kasztanowska', 15)
+
+		const jarecka = new Person(3, 'Jarecka', 'Kasztanowska', 45)
+
+
+		function joinFamily() {
+			familyArray.push(kasztan, kasztanka, jarecka)
+			console.log(familyArray)
+		}
+		joinFamily()
+
+
+		// const twoArgumnets = (x, y) => ({ id: x, name: y })
+
+
+		// console.log(twoArgumnets('666', 'JAnKowalski'))
 
 
 
 
-		
+		// let Person = function (id, name) {
+		// 	this.id = id,
+		// 		this.name = name
+		// }
+
+		// const jakKowalski = new Person('999', 'KowalczykJanek')
+
+		// console.log(jakKowalski)
+
+
+
 		/*
 		
 		- Napisz funkcję strzałkową, która ustawi wartości 2 właściwości obiektu - o kluczach id oraz name - na podstawie przekazanych do tej funkcji strzałkowej 2 parametrów.
@@ -40,8 +63,9 @@
 		- Stosując ciało "zwięzłe" (ang. concise body) funkcji strzałkowej, pamiętaj, by opakować znajdujący się tam obiekt w nawias, by odróżnić obiekt od ciała blokowego (ang. block body) funkcji strzałkowej.
 		
 		*/
-		
+
 	</script>
 
 </body>
+
 </html>
