@@ -13,15 +13,15 @@
 	<script>
 		familyArray = []
 
-		function Person(id, name, lastName, age) {
-			this.id = id
-			this.name = name
-			this.lastName = lastName
-			this.age = age
-		}
-		new Person(9, 'Janusz', 'Kowalski', 19)
+	function Person(id, name, lastName, age){
+		this.id = id
+		this.name = name
+		this.lastName= lastName
+		this.age= age
+	}
+		new Person (9, 'Janusz', 'Kowalski', 19)
 
-		const kasztan = new Person(1, 'Kasztanek', 'Kasztanowski', 12)
+		const kasztan = new Person(1, 'Kasztanek', 'Kasztanowski',12)
 
 		const kasztanka = new Person(2, 'Kasztanka', 'Kasztanowska', 15)
 
@@ -29,29 +29,29 @@
 
 
 		function joinFamily() {
-			familyArray.push(kasztan, kasztanka, jarecka)
+			familyArray.push(kasztan,kasztanka, jarecka)
 			console.log(familyArray)
 		}
 		joinFamily()
+		
 
 
-		// const twoArgumnets = (x, y) => ({ id: x, name: y })
+// const twoArgumnets = (x, y) =>  ({id: x, name: y})
 
 
-		// console.log(twoArgumnets('666', 'JAnKowalski'))
+// console.log(twoArgumnets('666','JAnKowalski'))
 
 
 
 
-		// let Person = function (id, name) {
-		// 	this.id = id,
-		// 		this.name = name
-		// }
+// let Person  = function (id, name) {
+// 	this.id = id,
+// 	this.name = name
+// }
 
-		// const jakKowalski = new Person('999', 'KowalczykJanek')
+// const jakKowalski = new Person('999','KowalczykJanek')
 
-		// console.log(jakKowalski)
-
+// console.log(jakKowalski)
 
 
 		/*
@@ -69,3 +69,6 @@
 </body>
 
 </html>
+
+
+

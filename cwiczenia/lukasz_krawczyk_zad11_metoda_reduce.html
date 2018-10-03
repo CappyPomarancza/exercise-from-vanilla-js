@@ -18,16 +18,14 @@
 
 	<script>
 
-		const funkcja1 = () => {
-			const tab = [1, 3, 4, 5, 10]
-			const suma = tab.reduce((reduced, el, i, arr) =>{ return reduced + el}, 0)
-			const srednia = suma / tab.length
-			
-			document.querySelector('.info__output').innerHTML = srednia
-			
+		const numbers = [1, 3, 4, 5, 10]
+		const renderFunction = () => {
+			const sum = numbers.reduce((reduced, el, i, arr) => (reduced += el), 0)
+			const average = sum / numbers.length
+			document.querySelector('.info__output').innerHTML =  average
 		}
+		document.querySelector('.button').addEventListener('click', renderFunction)
 
-		document.querySelector('.button').addEventListener('click', funkcja1)
 
 		/*
 
@@ -40,6 +38,19 @@
 		- Średnia arytmetyczna, w przypadku naszej tablicy, ma wynosić 4.6.
 
 		*/
+
+
+
+		// const funkcja1 = () => {
+		// 	const tab = [1, 3, 4, 5, 10]
+		// 	const suma = tab.reduce((reduced, el, i, arr) =>{ return reduced + el}, 0)
+		// 	const srednia = suma / tab.length
+
+		// 	document.querySelector('.info__output').innerHTML = srednia
+
+		// }
+
+		// document.querySelector('.button').addEventListener('click', funkcja1)
 
 	</script>
 

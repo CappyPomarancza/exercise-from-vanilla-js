@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 	<title>Zadanie 14. Metody .map(), .filter(), .reduce()</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
 </head>
+
 <body>
 
 	<button type="button" class="button">Wyświetl w alercie</button>
 
 	<script>
-		
-		
-
-			const piosenkiPolskie = [
-				{ id: 1, title: 'Następna stacja', artist: 'Taco Hemingway', duration: 250 },
-				{ id: 2, title: 'Candy', artist: 'Quebonafide & Klaudia Szafrańska', duration: 195 },
-				{ id: 3, title: 'Nowy kolor', artist: 'Otsochodzi & Taco Hemingway', duration: 188 },
-				{ id: 4, title: 'Tamagotchi (Remix)', artist: 'Taconafide & Dawid Podsiadło', duration: 202 }
-			];
-
-			const piosenkiZagraniczne = [
-				{ id: 99, title: 'Ayo', artist: 'Chris Brown & Tyga', duration: 225 }
-			];
-
-				const allSongs = ()=> {
-					const newArray = piosenkiPolskie.concat(piosenkiZagraniczne)
-					.map((el, index, array) => ({id: el.id, title: el.title, artist: el.artist, duration: Math.round(el.duration / 60) }) )
-					.filter(el=> el.duration > 3)
-					.map(el=> el.title)
-					.join(' , ')
 
 
 
+		const piosenkiPolskie = [
+			{ id: 1, title: 'Następna stacja', artist: 'Taco Hemingway', duration: 250 },
+			{ id: 2, title: 'Candy', artist: 'Quebonafide & Klaudia Szafrańska', duration: 195 },
+			{ id: 3, title: 'Nowy kolor', artist: 'Otsochodzi & Taco Hemingway', duration: 188 },
+			{ id: 4, title: 'Tamagotchi (Remix)', artist: 'Taconafide & Dawid Podsiadło', duration: 202 }
+		];
 
+		const piosenkiZagraniczne = [
+			{ id: 99, title: 'Ayo', artist: 'Chris Brown & Tyga', duration: 225 }
+		];
 
+		const results = () => {
+			const allSongs = piosenkiPolskie.concat(piosenkiZagraniczne)
+				.map((el, i, arr) => ({ id: el.id, title: el.title, artist: el.artist, duration: Math.round((el.duration / 60)) }))
+				.filter(el=>el.duration > 3)
+				.map(el=> el.title)
+				.join(', ')
+				console.log(allSongs)
+		}
 
-					console.log(newArray)
-					alert(newArray)
-						
-				}
-
-document.querySelector('.button').addEventListener('click', allSongs)
+		document.querySelector('.button').addEventListener('click', results)
 
 
 			/*
@@ -69,9 +63,29 @@ document.querySelector('.button').addEventListener('click', allSongs)
 
 			*/
 
-	
-		
+// 			const allSongs = ()=> {
+// 					const newArray = piosenkiPolskie.concat(piosenkiZagraniczne)
+// 					.map((el, index, array) => ({id: el.id, title: el.title, artist: el.artist, duration: Math.round(el.duration / 60) }) )
+// 					.filter(el=> el.duration > 3)
+// 					.map(el=> el.title)
+// 					.join(' , ')
+
+
+
+
+
+
+// 					console.log(newArray)
+// 					alert(newArray)
+
+// 				}
+
+// document.querySelector('.button').addEventListener('click', allSongs)
+
+
+
 	</script>
 
 </body>
+
 </html>

@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 	<title>Zadanie 6. Metoda .map()</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
 </head>
+
 <body>
 
 	<script>
-		
+
 		const smartfony = [
 			{ name: 'Apple iPhone X', price: 4699.00 },
 			{ name: 'Huawei P20 Lite', price: 1599.99 },
 			{ name: 'Samsung Galaxy S9', price: 3548.00 }
 		]
 
+		const smartphons = smartfony.map((el, i, ar)=> i + 1 + ' ' + el.name + ' :(' + el.price + ')' )
+		console.log(smartphons)
 
-		const newArray = smartfony.map((el, i, arr) => el.name + ' ' + el.price) 
 
-		console.log(newArray)
-		
 		/*
 
 		- Dana jest tablica obiektów ze smartfonami.
@@ -34,8 +35,14 @@
 		- Wynik metody .map() wyprowadź na ekran za pomocą metody console.log().
 
 		*/
-		
+
+
+		// const newArray = smartfony.map((el, i, arr) => el.name + ' ' + el.price)
+
+		// console.log(newArray)
+
 	</script>
 
 </body>
+
 </html>

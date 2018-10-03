@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 	<title>Zadanie 5. Metoda .map()</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
 </head>
+
 <body>
 
 	<script>
+
+
+		const numbers = [5, 6, 13, 0, 1, 18, 23]
 		
-		const liczby = [5, 6, 13, 0, 1, 18, 23]
+		const multiplyNumbers = numbers.map(el=> el * 2)
+		console.log(multiplyNumbers)
 
-		const liczby2 = liczby.map( (el) => (el * 2 ))
-		console.log(liczby2)
+		const sumNumbers = multiplyNumbers.reduce((reduced, el, i, arr)=> reduced+=el,0)
+		console.log(sumNumbers)
 
 
-		
 		/*
 
 		Dana jest tablica z liczbami [5, 6, 13, 0, 1, 18, 23].
@@ -30,8 +35,38 @@
 		Wynik metody .map() wyprowadź na ekran za pomocą metody console.log().
 
 		*/
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// 		const liczby = [5, 6, 13, 0, 1, 18, 23]
+
+// 		const liczby2 = liczby.map((el) => (el * 2))
+// 		console.log(liczby2)
+
 	</script>
 
 </body>
+
 </html>

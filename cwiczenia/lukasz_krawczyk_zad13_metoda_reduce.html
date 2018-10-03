@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 	<title>Zadanie 13. Metoda .reduce()</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
 </head>
+
 <body>
 
 	<button type="button" class="button">Wyświetl w konsoli</button>
@@ -13,31 +15,32 @@
 	<span class='span'> </span>
 
 	<script>
-		
-	
 
-			const piosenki = [
-				[
-					{ id: 1, title: 'Następna stacja', artist: 'Taco Hemingway' },
-					{ id: 2, title: 'Candy', artist: 'Quebonafide & Klaudia Szafrańska' },
-					{ id: 3, title: 'Nowy kolor', artist: 'Otsochodzi & Taco Hemingway' },
-					{ id: 4, title: 'Tamagotchi (Remix)', artist: 'Taconafide & Dawid Podsiadło' }
-				],
-				[
-					{ id: 99, title: 'Ayo', artist: 'Chris Brown & Tyga' }
-				]
+
+
+		const piosenki = [
+			[
+				{ id: 1, title: 'Następna stacja', artist: 'Taco Hemingway' },
+				{ id: 2, title: 'Candy', artist: 'Quebonafide & Klaudia Szafrańska' },
+				{ id: 3, title: 'Nowy kolor', artist: 'Otsochodzi & Taco Hemingway' },
+				{ id: 4, title: 'Tamagotchi (Remix)', artist: 'Taconafide & Dawid Podsiadło' }
+			],
+			[
+				{ id: 99, title: 'Ayo', artist: 'Chris Brown & Tyga' }
+			]
 		]
 
 
-				const allSongs = ()=> {
-					const newArray = piosenki
-					.reduce((reduced, el, index, array) => reduced.concat(el))
-					console.log(newArray)
-						
-				}
-				
-				document.querySelector('.button').addEventListener('click', allSongs)
-			
+		const results = () => {
+			const allSongs = piosenki.reduce((reduced, el, i, arr) => reduced.concat(el))
+			//const coss = cos.map(el => el.concat())
+			console.log(allSongs)
+		}
+
+		document.querySelector('.button').addEventListener('click', results)
+
+
+
 
 			/*
 
@@ -53,9 +56,20 @@
 
 			*/
 
-	
-		
+
+
+
+	// const allSongs = ()=> {
+	// 				const newArray = piosenki
+	// 				.reduce((reduced, el, index, array) => reduced.concat(el))
+	// 				console.log(newArray)
+
+	// 			}
+
+	// 			document.querySelector('.button').addEventListener('click', allSongs)
+
 	</script>
 
 </body>
+
 </html>

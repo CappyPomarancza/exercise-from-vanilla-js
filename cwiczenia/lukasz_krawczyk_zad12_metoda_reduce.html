@@ -28,15 +28,14 @@
 		]
 
 
-		const sumPopulation = () => {
-			const suma = kraje
-				.filter(el => el.country !== 'Kanada')
-				.reduce((reduced, el, index, array) => {
-					return reduced + el.population
-				}, 0)
-			document.querySelector('.info__output').innerHTML = suma
+		const filteredPopulation = () => {
+			const filteredCountries = kraje.filter(el => el.country !== 'Kanada')
+			const score = filteredCountries.reduce((reduced, el) => reduced += el.population,0)
+			document.querySelector('.info__output').innerHTML = score
+			console.log(filteredCountries)
 		}
-		document.querySelector('.button').addEventListener('click', sumPopulation)
+		
+		document.querySelector('.button').addEventListener('click', filteredPopulation)
 
 
 
@@ -53,6 +52,16 @@
 			- Oczekiwany wynik, w przypadku naszej tablicy obiektów, to 254450475.
 
 			*/
+
+		// 	const sumPopulation = () => {
+		// 	const suma = kraje
+		// 		.filter(el => el.country !== 'Kanada')
+		// 		.reduce((reduced, el, index, array) => {
+		// 			return reduced + el.population
+		// 		}, 0)
+		// 	document.querySelector('.info__output').innerHTML = suma
+		// }
+		// document.querySelector('.button').addEventListener('click', sumPopulation)
 
 	</script>
 
