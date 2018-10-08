@@ -15,23 +15,15 @@
 		fetch('https://jsonplaceholder.typicode.com/photos')
 			.then(Response => Response.json())
 			.then(Response => {
+				console.log(Response)
 				const x = Response
-					.filter((el, i, r)=> i <10 )
-					.map((el, i, arr)=> { return '<a href="' + el.url + '"><img src="' + el.thumbnailUrl + '" alt=""></a>' })
+					.filter((el, i, r) => i < 10)
+					.map((el, i, arr) => { return '<a href="' + el.url + '"><img src="' + el.thumbnailUrl + '" alt=""></a>' })
 					.reduce((reduced, element, index, array) => reduced + element, '')
-				 document.querySelector('body').innerHTML = x
+				document.querySelector('body').innerHTML = x
 			})
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			//.catch(document.querySelector('body').innerHTML = 'coś poszło nie tak!!!')
-		
+			.catch(document.querySelector('body').innerHTML = 'coś poszło nie tak!!!')
+
 		/*
 
 		- Korzystając z metody .fetch(), pobierz w formacie JSON kolekcję zdjęć (tablicę obiektów ze zdjęciami).
